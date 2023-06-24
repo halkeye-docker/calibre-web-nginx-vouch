@@ -1,0 +1,13 @@
+#!/usr/bin/with-contenv bash
+
+## Ubuntu
+if [ -f /usr/bin/apt ]; then
+    echo "**** Adding nginx packages to install list ****"
+    echo "nginx" >> /mod-repo-packages-to-install.list
+
+fi
+# Alpine
+if [ -f /sbin/apk ]; then
+    echo "**** Adding nginx packages to install list ****"
+    echo "nginx" >> /mod-repo-packages-to-install.list
+fi
